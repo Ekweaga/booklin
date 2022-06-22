@@ -1,0 +1,49 @@
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+    text-decoration: none;
+    text-transform: capitalize;
+    
+  }
+  :root{
+    --green:#27ae60;
+    --dark:#219150;
+    
+  }
+  .header .header-1{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:0.5rem 9%;
+  }
+  .header .header-1 form{
+    width:50rem;
+    height:5rem;
+    overflow: hidden;
+    display: flex;
+    border-radius: 0.5rem;
+    align-items: center;
+    justify-content: center;
+  }
+  input{
+   
+    width: 50%;
+    padding: 10px;
+    height:30px;
+    outline:none;
+    border: 1px solid green;
+    border-radius: 8px;
+    box-shadow: 2px 1 px 1px 1px rgba(0,0,0,0.8);
+  
+    text-transform: none;
+    
+
+}
+.icons .icon{
+    font-size:20px;
+    cursor: pointer;
+}
+.icons .icon:hover{
+    color:#27ae60 ;
+}

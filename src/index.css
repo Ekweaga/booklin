@@ -6,6 +6,19 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+  text-decoration: none;
+  text-transform: capitalize;
+  
+}
+:root{
+  --green:#27ae60;
+  --dark:#219150;
+  
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
