@@ -16,16 +16,20 @@ import {AiOutlineHome} from 'react-icons/ai'
 import {BsCart} from 'react-icons/bs'
 import {SiBloglovin} from 'react-icons/si'
 import {MdOutlineLibraryBooks} from 'react-icons/md'
+import Login from './Auth/Login';
+import Auth from './Auth';
+import {useSelector} from 'react-redux'
 
 function App() {
+  const isLoggedIn = useSelector((state)=>state.auth.isLoggedIn)
 
   useEffect(()=>{
     Aos.init({duration:1000})
   },[])
   return (
     <div className="App">
-      <Menu/>
-     
+     {true?'':<Menu/>} 
+   
       <BrowserRouter>
       <div className='top'>
     <ul>
@@ -47,7 +51,7 @@ function App() {
       <Switch>
         <Route path='/' exact>
           
-          <Home/>
+          {isLoggedIn? <Home/>:<Auth/>}
         </Route>
         <Route path='/books' exact>
           <Books/>

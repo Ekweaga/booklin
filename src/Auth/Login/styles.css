@@ -1,0 +1,29 @@
+.loginform{
+    height:500px;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+.loginform .form{
+    width:500px;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+
+}
+.form form input{
+    width:300px;
+    margin-top:30px;
+    padding:8px;
+}
+.form form button{
+    background-color: green;
+    color:white;
+    width: 300px;
+    padding:8px;
+    border:none;
+    margin-top:15px;
+    cursor:pointer;
+}

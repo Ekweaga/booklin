@@ -14,10 +14,12 @@ import { DataItem } from '../Data/data'
 import Header from '../Header'
 import {Link} from 'react-router-dom'
 import {AiOutlineStar} from 'react-icons/ai'
+import Menu from '../Menu'
 
 function Home() {
   return (
     <> 
+  
     <Header/>
     <div className="icons">
       <div className='icon'data-aos="zoom-in">
