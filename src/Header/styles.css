@@ -66,5 +66,14 @@
        
         gap:1.5rem;
     }
+    .top{
+        display:none;
+    }
+    .row .homeimg img{
+        height:400px;
+        border-bottom-right-radius: 50px;
+        border-top-left-radius: 50px;
+        width:300px;
+    }
 }
 

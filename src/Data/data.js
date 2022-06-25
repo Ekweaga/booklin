@@ -1,8 +1,22 @@
+import f1 from './f1.jpeg'
+import f2 from './f2.jpeg'
+import f3 from './f3.jpeg'
+import f4 from './f4.jpeg'
+import f5 from './f5.jpeg'
+import f6 from './f6.jpeg'
+import f7 from './f7.jpeg'
+import f8 from './f8.jpeg'
+import f9 from './f9.jpeg'
+import f10 from './f10.jpeg'
+import f11 from './f11.jpeg'
+import f12 from './f12.jpeg'
+
+
 export const DataItem=
 [
     {
         id:1,
-        image:'./if(1).jpeg',
+        image:f1,
         price:21000,
         quantity:0,
         name:"Burger",
@@ -10,7 +24,7 @@ export const DataItem=
       },
       {
         id:2,
-        image:'/images/f2.jpeg',
+        image:f2,
         price:13000,
         quantity:0,
         name:"Mediterran Salad",
@@ -18,7 +32,7 @@ export const DataItem=
       },
       {
         id:3,
-        image:'/images/f3.jpeg',
+        image:f3,
         price:15000,
         quantity:0,
         name:"Butterfly pasta",
@@ -27,7 +41,7 @@ export const DataItem=
       },
       {
         id:4,
-        image:'/images/f4.jpeg',
+        image:f4,
         price:18000,
         quantity:0,
         name:"White sauce pasta",
@@ -35,7 +49,7 @@ export const DataItem=
       },
       {
         id:5,
-        image:'/images/f5.jpeg',
+        image:f5,
         price:20000,
         quantity:0,
         name:"Tooty fruity bowl",
@@ -43,7 +57,7 @@ export const DataItem=
       },
       {
         id:6,
-        image:'/images/f6.jpeg',
+        image:f6,
         price:32000,
         quantity:0,
         name:"Summer Asian Slaw",
@@ -51,7 +65,7 @@ export const DataItem=
       },
       {
         id:7,
-        image:'/images/f7.jpeg',
+        image:f7,
         price:23000,
         quantity:0,
         name:"Granola cereal bowl",
@@ -59,7 +73,7 @@ export const DataItem=
       },
       {
         id:8,
-        image:'/images/f8.jpeg',
+        image:f8,
         price:43000,
         quantity:0,
         name:"Palm bowl",
@@ -67,7 +81,7 @@ export const DataItem=
       },
       {
         id:9,
-        image:'/images/f9.jpeg',
+        image:f9,
         price:50000,
         quantity:0,
         name:"Tigela smoothie",
@@ -75,7 +89,7 @@ export const DataItem=
       },
       {
         id:10,
-        image:'/images/f10.jpeg',
+        image:f10,
         price:25000,
         quantity:0,
         name:"Fried chicken",
@@ -83,7 +97,7 @@ export const DataItem=
       },
       {
         id:11,
-        image:'/images/f11.jpeg',
+        image:f11,
         price:25000,
         quantity:0,
         name:"Pizza pasta",
@@ -91,42 +105,10 @@ export const DataItem=
       },
       {
         id:12,
-        image:'/images/f12.jpeg',
+        image:f12,
         price:25000,
         quantity:0,
         name:"Greek salad",
-        desc:"Spicey with garlic and then deep fried to crispy perfection"
-      },
-      {
-        id:13,
-        image:'/images/f14.jpeg',
-        price:25000,
-        quantity:0,
-        name:"Israel salad",
-        desc:"Spicey with garlic and then deep fried to crispy perfection"
-      },
-      {
-        id:14,
-        image:'/images/f15.jpeg',
-        price:25000,
-        quantity:0,
-        name:"Cruisine hawail",
-        desc:"Spicey with garlic and then deep fried to crispy perfection"
-      },
-      {
-        id:15,
-        image:'/images/f16.jpeg',
-        price:25000,
-        quantity:0,
-        name:"Breakfast cereal",
-        desc:"Spicey with garlic and then deep fried to crispy perfection"
-      },
-      {
-        id:16,
-        image:'/images/f13.jpeg',
-        price:25000,
-        quantity:0,
-        name:"Breakfast cereal",
         desc:"Spicey with garlic and then deep fried to crispy perfection"
       }
 ]

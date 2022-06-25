@@ -2,6 +2,8 @@ import React from 'react'
 import {AiOutlineUser} from 'react-icons/ai'
 import {GiEternalLove} from 'react-icons/gi'
 import {BsCartFill} from 'react-icons/bs'
+import {FaUserTie} from 'react-icons/fa'
+
 import './styles.css'
 
 function Menu() {
@@ -14,8 +16,8 @@ function Menu() {
                
             </form>
 
-            <div className='icons'>
-            <GiEternalLove className='icon'/> &nbsp;
+            <div className='icones'>
+            <GiEternalLove className='icon'/> &nbsp; <FaUserTie className='icon'/>&nbsp;
             <BsCartFill className='icon'/>
         </div>
         </div>
