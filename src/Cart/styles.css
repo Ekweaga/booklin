@@ -1,0 +1,49 @@
+.cartitems{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height:600px;
+
+}
+.cartitems .cartitem{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    height:30px;
+
+}
+.cartitems .cartitem div{
+    margin:30px;
+}
+.cartitems .cartitem div button{
+    background-color:green;
+    color:white;
+    width:50px;
+    padding:7px;
+    margin:7px;
+    border:none;
+}
+.empty{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height:600px;
+}
+.totalprice{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:50px;
+}
+.totalprice div{
+    margin:20px;
+}
+.emptycart button{
+    background-color:green;
+    color:white;
+    width:150px;
+    padding:7px;
+    margin:7px;
+    border:none;
+}

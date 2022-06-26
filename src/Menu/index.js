@@ -3,10 +3,14 @@ import {AiOutlineUser} from 'react-icons/ai'
 import {GiEternalLove} from 'react-icons/gi'
 import {BsCartFill} from 'react-icons/bs'
 import {FaUserTie} from 'react-icons/fa'
+import {useSelector} from 'react-redux'
+
 
 import './styles.css'
 
 function Menu() {
+  const totalquantity = useSelector((state)=>state.cart.totalQuantity)
+
   return (
     <header className="header">
         <div className='header-1'>
@@ -18,7 +22,7 @@ function Menu() {
 
             <div className='icones'>
             <GiEternalLove className='icon'/> &nbsp; <FaUserTie className='icon'/>&nbsp;
-            <BsCartFill className='icon'/>
+            <BsCartFill className='icon'/>{totalquantity}
         </div>
         </div>
         

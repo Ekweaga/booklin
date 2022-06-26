@@ -58,8 +58,8 @@ function Home() {
     <div className='demanded'>
       <h1>Demanded books</h1>
       <div className='demandedbooks'> 
-         {DataItem.slice(0,5).map((data)=>{
-        return   <div >
+         {DataItem.slice(0,5).map((data,index)=>{
+        return   <div key={index}>
                <img src={data.image}/>
                <div><AiOutlineStar style={{color:'green'}}/><AiOutlineStar style={{color:'green'}}/><AiOutlineStar style={{color:'green'}}/><AiOutlineStar style={{color:'green'}}/><AiOutlineStar style={{color:'green'}}/></div>
                <div>{data.price}</div>
@@ -111,7 +111,7 @@ function Home() {
                <div style={{float:'right',marginTop:'15px'}}><button>Read more</button></div>
             </div>
           </div>
-          <div className='blog' data-aos="slide-down">
+          <div className='blog' data-aos="zoom-in">
           <img src={jj}/>
           <div style={{padding:'10px'}}>
               <h2>
@@ -137,8 +137,8 @@ function Home() {
       <div className='arrival'>
       <h1>New arrival books</h1>
       <div className="arrivalbooks">
-      {DataItem.slice(5,10).map((data)=>{
-        return   <div>
+      {DataItem.slice(5,10).map((data,index)=>{
+        return   <div key={index}>
                <img src={data.image}/>
                <div><AiOutlineStar style={{color:'green'}}/><AiOutlineStar style={{color:'green'}}/><AiOutlineStar style={{color:'green'}}/><AiOutlineStar style={{color:'green'}}/><AiOutlineStar style={{color:'green'}}/></div>
                <div>{data.price}</div>

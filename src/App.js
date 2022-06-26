@@ -22,16 +22,19 @@ import {useSelector} from 'react-redux'
 
 function App() {
   const isLoggedIn = useSelector((state)=>state.auth.isLoggedIn)
+  const totalquantity = useSelector((state)=>state.cart.totalQuantity)
 
   useEffect(()=>{
     Aos.init({duration:1000})
   },[])
+
+
   return (
     <div className="App">
-     {true?'':<Menu/>} 
+     {isLoggedIn?<Menu/>:''} 
    
       <BrowserRouter>
-      <div className='top'>
+      {isLoggedIn ? <div className='top'>
     <ul>
         <li>
         <Link to='' style={{color:'white',textDecoration:'none'}}>Home</Link>
@@ -47,7 +50,7 @@ function App() {
         </li>
     </ul>
 
-</div>
+</div>:""}
       <Switch>
         <Route path='/' exact>
           
@@ -60,13 +63,13 @@ function App() {
           <Cart/>
         </Route>
         </Switch>
-        <div className='tops'>
+        {isLoggedIn ?<div className='tops'>
           <ul>
               <li>
               <Link to='' style={{color:'white',textDecoration:'none'}}> <AiOutlineHome style={{width:'25px',height:'35px'}}/></Link>
               </li>
               <li>
-              <Link to='cart' style={{color:'white',textDecoration:'none'}}> <BsCart style={{width:'25px',height:'35px'}}/></Link> 
+              <Link to='cart' style={{color:'white',textDecoration:'none'}}> <BsCart style={{width:'25px',height:'35px'}}/>{totalquantity}</Link> 
               </li>
               <li>
               <Link to='books' style={{color:'white',textDecoration:'none'}}><MdOutlineLibraryBooks style={{width:'25px',height:'35px'}}/></Link>  
@@ -76,11 +79,11 @@ function App() {
               </li>
           </ul>
 
-      </div>
+      </div>:''}
         </BrowserRouter>
         
 
-    <Footer/>
+    {isLoggedIn ?<Footer/>:''}
         
       
     </div>

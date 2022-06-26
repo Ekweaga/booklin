@@ -40,4 +40,7 @@
     .footer{
         margin-bottom:80px;
     }
+    .footer p{
+        font-size: 13px;
+    }
 }
