@@ -11,7 +11,8 @@ function Header() {
 <div className='row'>
     <div class="content" data-aos="slide-left">
         <h2>Upto 75% off</h2>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.
+        <p>Get a 75% discount for every $15000 book you buy. From applied literature to educational resources, we have a lot of textbooks to 
+              offer you. We provide only the new books on rent for a period of 3 days
             
         </p>
         <div><button>Shop Now</button></div>

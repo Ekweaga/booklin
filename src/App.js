@@ -31,9 +31,11 @@ function App() {
 
   return (
     <div className="App">
-     {isLoggedIn?<Menu/>:''} 
-   
+    
       <BrowserRouter>
+      <div className='sticky'>
+     {isLoggedIn?<Menu/>:''} 
+     </div>
       {isLoggedIn ? <div className='top'>
     <ul>
         <li>

@@ -2,14 +2,27 @@ import React from 'react'
 import './styles.css'
 import {useDispatch} from 'react-redux'
 import { authActions } from '../../Redux/store/auth-slice'
+import {useState} from 'react'
 
 function Login() {
+    const [name, setusername] = useState('')
+    const [email, setemail] = useState('')
+    const [password, setpassword] = useState('')
+    const [error,seterror] = useState('')
+
+   
     const dispatch = useDispatch()
     
     const handlesubmit = (e) =>{
-                e.preventDefault();
-                dispatch(authActions.login())
+        e.preventDefault();
+        if(name === "" || email ==="" ){
+            seterror("Fields are empty")
+        }
+        else{
+            dispatch(authActions.login())
 
+        }
+               
     }
 
   return (
@@ -19,11 +32,12 @@ function Login() {
             <div className='form'>
                 <form onSubmit={handlesubmit}>
                     <div>
-                        <input type='text' placeholder='UserName'/>
+                        <input type='text' placeholder='UserName' onChange={(e)=>setusername(e.target.value)}/>
                     </div>
                     <div>
-                        <input type='text' placeholder='UserName'/>
+                        <input type='email' placeholder='Email' onChange={(e)=>setemail(e.target.value)}/>
                     </div>
+                    <div style={{color:'red',display:'flex', alignItems:'center', justifyContent:'center', margin:'10px',textTransform:'capitalize'}}>{error ? error : null}</div>
                     <div>
                        <button>LOGIN</button>
                     </div>

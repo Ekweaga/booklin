@@ -3,32 +3,35 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height:600px;
+  height:100vh;
 
 }
 .cartitems .cartitem{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    height:30px;
+   gap:30px;
+    margin-bottom:5px;
 
 }
 .cartitems .cartitem div{
-    margin:30px;
+    margin:0px;
 }
 .cartitems .cartitem div button{
     background-color:green;
     color:white;
-    width:50px;
+    width:30px;
+    height:30px;
     padding:7px;
-    margin:7px;
+    margin:10px;
     border:none;
+     border-radius:50%;
 }
 .empty{
     display:flex;
     align-items: center;
     justify-content: center;
-    height:600px;
+    height:100vh;
 }
 .totalprice{
     display:flex;
@@ -46,4 +49,5 @@
     padding:7px;
     margin:7px;
     border:none;
+   
 }

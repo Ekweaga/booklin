@@ -64,7 +64,7 @@ function Home() {
                <div><AiOutlineStar style={{color:'green'}}/><AiOutlineStar style={{color:'green'}}/><AiOutlineStar style={{color:'green'}}/><AiOutlineStar style={{color:'green'}}/><AiOutlineStar style={{color:'green'}}/></div>
                <div>{data.price}</div>
 
-               <div><button>Buy now</button></div>
+               <div><button><Link to='/books' style={{color:'white',textDecoration:'none'}}>Buy now</Link></button></div>
           </div>
          
         })}
@@ -77,7 +77,8 @@ function Home() {
           <div class="content" data-aos="slide-right">
             <h1 style={{color:'green'}}>Deal Of the Day</h1>
             <h2>Upto 50% off</h2>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.
+            <p>Get a 50% discount of any books you get today. From applied literature to educational resources, we have a lot of textbooks to 
+              offer you. We provide only the new books on rent for a period of 3 days
 
             </p>
             <div><button>Shop Now</button></div>
@@ -105,9 +106,9 @@ function Home() {
           <img src={img2}/>
           <div style={{padding:'10px'}}>
               <h2>
-                Why books are important
+                Why books are Important
               </h2>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+              <p>There is a saying that goes thus, readers are leaders. When you read you tend to go farer than your mates </p>
                <div style={{float:'right',marginTop:'15px'}}><button>Read more</button></div>
             </div>
           </div>
@@ -115,9 +116,9 @@ function Home() {
           <img src={jj}/>
           <div style={{padding:'10px'}}>
               <h2>
-                Why books are important
+              Awesome books for all Moods
               </h2>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+              <p>The year looks like an amazing year foor books. Let get best books that fit our moods for a better living </p>
               <div style={{float:'right',marginTop:'15px'}}><button>Read more</button></div>
             </div>
           </div>
@@ -125,9 +126,9 @@ function Home() {
           <img src={img4}/>
           <div style={{padding:'10px'}}>
               <h2>
-                Why books are important
+                Amazing Middle and frade fantasy
               </h2>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+              <p>Nothing lifts me up after a dull day like an excellent middle grade fantasy. </p>
               <div style={{float:'right',marginTop:'15px'}}><button>Read more</button></div>
             </div>
           </div>
@@ -142,7 +143,7 @@ function Home() {
                <img src={data.image}/>
                <div><AiOutlineStar style={{color:'green'}}/><AiOutlineStar style={{color:'green'}}/><AiOutlineStar style={{color:'green'}}/><AiOutlineStar style={{color:'green'}}/><AiOutlineStar style={{color:'green'}}/></div>
                <div>{data.price}</div>
-               <div><button>Buy now</button></div>
+               <div><button><Link to='/books' style={{color:'white',textDecoration:'none'}}>Buy now</Link></button></div>
           </div>
          
         })}

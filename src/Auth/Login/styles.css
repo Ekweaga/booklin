@@ -1,9 +1,11 @@
 .loginform{
-    height:700px;
+    height:100vh;
     display:flex;
     align-items:center;
     justify-content: center;
     flex-direction: column;
+    background-color: rgb(230, 238, 238);
+    margin:0;
 
 }
 .loginform .form{

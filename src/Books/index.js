@@ -13,10 +13,10 @@ function Books() {
     <><div className='demanded'>
           <h1>Demanded books</h1>
           <div className='demandedbooks'>
-              {DataItem.map((data,index) => {
+              {DataItem.slice(3,8).map((data,index) => {
                   return <div key={index}>
                       <img src={data.image} />
-                      <div>{data.price}</div>
+                      <div>${data.price}</div>
                       <div><button onClick={()=>dispatch(cartActions.addtocart({id:data.id,price:data.price,img:data.image}))}>Add to cart</button></div>
                   </div>
 
@@ -29,7 +29,7 @@ function Books() {
                   {DataItem.slice(5, 10).map((data,index) => {
                       return <div key={index}>
                           <img src={data.image} />
-                          <div>{data.price}</div>
+                          <div>${data.price}</div>
                           <div><button  onClick={()=>dispatch(cartActions.addtocart({id:data.id,price:data.price,img:data.image}))}>Add to cart</button></div>
                       </div>
 

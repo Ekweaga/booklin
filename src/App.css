@@ -1,5 +1,10 @@
+body{
+    padding:0;
+    margin:0;
+}
+
 .App {
-  
+  margin:0;
 }
 .tops{
     background-color: green;
@@ -29,6 +34,14 @@
     list-style: none;
    
     display:inline-block;
+}
+.sticky{
+    position:sticky;
+    top:0;
+    left:0;
+    box-shadow: 8px 6px 40px -25px rgba(0,0,0,0.7);
+    margin-bottom:30px;
+    z-index:1111;
 }
 @media(max-width:768px){
     .tops{

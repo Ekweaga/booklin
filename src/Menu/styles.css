@@ -20,6 +20,9 @@
     align-items: center;
     justify-content: space-between;
     padding:0.1rem 9%;
+    position:sticky;
+    left:0;
+    top:0;
   }
   .header .header-1 form{
     width:50rem;
