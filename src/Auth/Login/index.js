@@ -1,50 +1,47 @@
 import React from 'react'
+import {Link} from 'react-router-dom';
 import './styles.css'
 import {useDispatch} from 'react-redux'
 import { authActions } from '../../Redux/store/auth-slice'
 import {useState} from 'react'
+import { BoxFormContainer , FormContainer,Input,Button,BoldLink,MutedLink} from '../../common'
 
-function Login() {
+
+function Login({expand}) {
     const [name, setusername] = useState('')
     const [email, setemail] = useState('')
     const [password, setpassword] = useState('')
-    const [error,seterror] = useState('')
+    const [error,seterror] = useState(null)
 
    
     const dispatch = useDispatch()
     
     const handlesubmit = (e) =>{
         e.preventDefault();
-        if(name === "" || email ==="" ){
+        if(password === "" || email ==="" ){
             seterror("Fields are empty")
         }
         else{
-            dispatch(authActions.login())
+            dispatch(authActions.login());
+            seterror(null)
 
         }
+
+       
                
     }
 
   return (
-    <div className='loginform'>
-        <h1 style={{color:'green'}}>BOOKLIN</h1><br/>
-        <h3>LOGIN</h3>
-            <div className='form'>
-                <form onSubmit={handlesubmit}>
-                    <div>
-                        <input type='text' placeholder='UserName' onChange={(e)=>setusername(e.target.value)}/>
-                    </div>
-                    <div>
-                        <input type='email' placeholder='Email' onChange={(e)=>setemail(e.target.value)}/>
-                    </div>
-                    <div style={{color:'red',display:'flex', alignItems:'center', justifyContent:'center', margin:'10px',textTransform:'capitalize'}}>{error ? error : null}</div>
-                    <div>
-                       <button>LOGIN</button>
-                    </div>
-                </form>
-            </div>
-
-    </div>
+   <BoxFormContainer>
+    <FormContainer onSubmit={handlesubmit}>
+   
+        <Input type="email" placeholder="Email" value={email} onChange={(e)=>setemail(e.target.value)}/>
+        <Input type="password" placeholder="Password" value={password} onChange={(e)=>setpassword(e.target.value)}/><br/>
+        <span style={{width:'100%',fontSize:'14px'}} >Don't have an account ? <span onClick={expand} style={{color:'green'}}>Sign up</span></span><br/>
+        <Button type="submit" >Sign in</Button>
+        <div style={{width:'100%', textAlign:'center',color:'crimson',padding:'5px'}}>{error}</div>
+    </FormContainer>
+   </BoxFormContainer>
   )
 }
 

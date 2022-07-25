@@ -21,9 +21,9 @@ function Menu() {
                
             </form>
 
-            <div className='icones'>
+            <div className='icones' style={{display:'flex'}}>
             <GiEternalLove className='icon'/> &nbsp; <FaUserTie className='icon'/>&nbsp;
-           <Link to='cart' style={{color:'black',textDecoration:'none'}}> <BsCartFill className='icon'/>{totalquantity}</Link>
+           <Link to='cart' style={{color:'black',textDecoration:'none',display:'flex'}}> <BsCartFill className='icon'/>{totalquantity}</Link>
         </div>
         </div>
         

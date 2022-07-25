@@ -1,7 +1,9 @@
 import React from 'react'
 import {useState} from 'react'
+import { BoxFormContainer , FormContainer,Input,Button,BoldLink,MutedLink} from '../../common'
+import {Link} from 'react-router-dom'
 
-function Signup({login}) {
+function Signup({expand}) {
     const [name, setusername] = useState('')
     const [email, setemail] = useState('')
     const [password, setpassword] = useState('')
@@ -13,32 +15,26 @@ function Signup({login}) {
             seterror("Fields are empty")
         }
         else{
-                    login();
+
+            seterror("Account created")
+            setTimeout(()=>{
+                expand();
+            },1000)
+          
         }
+       
     }
   return (
-    <div className='loginform'>
-        <h1 style={{color:'green'}}>BOOKLIN</h1><br/>
-        <h3>Sign Up</h3>
-            <div className='form'>
-                <form onSubmit={handlesubmit}>
-                    <div>
-                        <input type='text' placeholder='UserName' onChange={(e)=>setusername(e.target.value)}/>
-                    </div>
-                    <div>
-                        <input type='email' placeholder='Email' onChange={(e)=>setemail(e.target.value)}/>
-                    </div>
-                    <div>
-                        <input type='password' placeholder='Password' onChange={(e)=>setpassword(e.target.value)}/>
-                    </div>
-                    <div style={{color:'red',display:'flex', alignItems:'center', justifyContent:'center', margin:'10px',textTransform:'capitalize'}}>{error ? error : null}</div>
-                    <div>
-                       <button >SIGN UP</button>
-                    </div>
-                </form>
-            </div>
-
-    </div>
+    <BoxFormContainer>
+    <FormContainer onSubmit={handlesubmit}>
+        <Input type="text" placeholder="Name" value={name} onChange={(e)=>setusername(e.target.value)}/><br/>
+        <Input type="email" placeholder="Email" value={email} onChange={(e)=>setemail(e.target.value)}/><br/>
+        <Input type="password" placeholder="Password" value={password} onChange={(e)=>setpassword(e.target.value)}/><br/>
+        <span style={{width:'100%',fontSize:'14px'}}>Already have an account ? <span style={{color:'green'}} onClick={expand}>Sign in</span></span><br/>
+        <Button type="submit">Sign Up</Button>
+        <div style={{width:'100%', textAlign:'center',color:'crimson',padding:'5px'}}>{error}</div>
+    </FormContainer>
+   </BoxFormContainer>
   )
 }
 

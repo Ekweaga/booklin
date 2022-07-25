@@ -32,7 +32,7 @@ function App() {
   return (
     <div className="App">
     
-      <BrowserRouter>
+     
       <div className='sticky'>
      {isLoggedIn?<Menu/>:''} 
      </div>
@@ -82,7 +82,7 @@ function App() {
           </ul>
 
       </div>:''}
-        </BrowserRouter>
+    
         
 
     {isLoggedIn ?<Footer/>:''}
